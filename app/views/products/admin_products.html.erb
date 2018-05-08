@@ -54,27 +54,29 @@ body {
 <div class="main">
   <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+<h1>Products</h1>
 
 <table>
   <thead>
     <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Username</th>
+      <th>Name</th>
+      <th>Weight</th>
+      <th>Price</th>
+      <th>User</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @users.each do |user| %>
+    <% @products.each do |product| %>
       <tr>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= user.username %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= product.name %></td>
+        <td><%= product.weight %></td>
+        <td><%= product.price %></td>
+        <td><%= product.user_id %></td>
+        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -82,7 +84,7 @@ body {
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'New Product', new_product_path %>
 </div>
      
 </body>

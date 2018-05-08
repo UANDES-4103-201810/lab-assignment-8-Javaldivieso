@@ -3,13 +3,13 @@ class UsersController < ApplicationController
   def admin_home
   end
   
-  def admin_products
-  end
+  
  
   def admin_users_products
   end
 
-  def admin_users
+  def admin_users 
+     @users = User.all
   end
 
   # GET /users
